@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contain">
+        <h2>Memory Game</h2>
+        <div class="timer">
+          Time: <span id="minutes">0</span> min <span id="seconds">0</span> sec
+          <span>&nbsp;&nbsp;&nbsp;Flips:&nbsp;</span
+          ><span id="numOfFlips">0</span>
+        </div>
+        <div class="grid"></div>
+      </div>
+      <div class="contain">
+        <label for="grid-size" class="grid-size-label"
+          >Select a grid size:</label
+        >
+        <div class="input-group">
+          <label for="grid-size-row" class="grid-size-label">row:</label>
+          <input
+            type="number"
+            id="grid-size-row"
+            class="grid-size"
+            min="2"
+            max="4"
+            required
+          />
+          <p class="grid-size-label">x</p>
+          <label for="grid-size-column" class="grid-size-label">column:</label>
+          <input
+            type="number"
+            id="grid-size-column"
+            class="grid-size"
+            min="2"
+            max="4"
+            required
+          />
+        </div>
+        <button type="button" class="start-button" id="start">New Grid</button>
+        <button type="button" class="reset" id="reset">Reset</button>
+      </div>
+      <div class="overlay" id="overlay">
+        <div class="overlay-message" id="overlay-message"></div>
+        <button type="button" class="restart-button" id="restart-button">
+          Restart
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
